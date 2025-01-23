@@ -4,6 +4,7 @@
 
 // ignore_for_file: public_member_api_docs
 
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:file_selector/file_selector.dart'
@@ -18,6 +19,10 @@ import 'package:share_plus/share_plus.dart';
 import 'image_previews.dart';
 
 void main() {
+  // Set `downloadFallbackEnabled` to `false`
+  // to disable downloading files if `shareXFiles` fails on web.
+  Share.downloadFallbackEnabled = true;
+
   runApp(const DemoApp());
 }
 
@@ -32,6 +37,7 @@ class DemoAppState extends State<DemoApp> {
   String text = '';
   String subject = '';
   String uri = '';
+  String fileName = '';
   List<String> imageNames = [];
   List<String> imagePaths = [];
 
@@ -87,6 +93,18 @@ class DemoAppState extends State<DemoApp> {
                 maxLines: null,
                 onChanged: (String value) {
                   setState(() => uri = value);
+                },
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Share Text as File',
+                  hintText: 'Enter the filename you want to share your text as',
+                ),
+                maxLines: null,
+                onChanged: (String value) {
+                  setState(() => fileName = value);
                 },
               ),
               const SizedBox(height: 16),
@@ -157,6 +175,21 @@ class DemoAppState extends State<DemoApp> {
                   );
                 },
               ),
+              const SizedBox(height: 16),
+              Builder(
+                builder: (BuildContext context) {
+                  return ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                      backgroundColor: Theme.of(context).colorScheme.primary,
+                    ),
+                    onPressed: fileName.isEmpty || text.isEmpty
+                        ? null
+                        : () => _onShareTextAsXFile(context),
+                    child: const Text('Share text as XFile'),
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -212,20 +245,50 @@ class DemoAppState extends State<DemoApp> {
   void _onShareXFileFromAssets(BuildContext context) async {
     final box = context.findRenderObject() as RenderBox?;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
-    final data = await rootBundle.load('assets/flutter_logo.png');
-    final buffer = data.buffer;
-    final shareResult = await Share.shareXFiles(
-      [
-        XFile.fromData(
-          buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
-          name: 'flutter_logo.png',
-          mimeType: 'image/png',
-        ),
-      ],
-      sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
-    );
+    try {
+      final data = await rootBundle.load('assets/flutter_logo.png');
+      final buffer = data.buffer;
+      final shareResult = await Share.shareXFiles(
+        [
+          XFile.fromData(
+            buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
+            name: 'flutter_logo.png',
+            mimeType: 'image/png',
+          ),
+        ],
+        sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
+      );
+      scaffoldMessenger.showSnackBar(getResultSnackBar(shareResult));
+    } catch (e) {
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text('Error: $e')),
+      );
+    }
+  }
 
-    scaffoldMessenger.showSnackBar(getResultSnackBar(shareResult));
+  void _onShareTextAsXFile(BuildContext context) async {
+    final box = context.findRenderObject() as RenderBox?;
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+
+    try {
+      final shareResult = await Share.shareXFiles(
+        [
+          XFile.fromData(
+            utf8.encode(text),
+            // name: fileName, // Notice, how setting the name here does not work.
+            mimeType: 'text/plain',
+          ),
+        ],
+        sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
+        fileNameOverrides: [fileName],
+      );
+
+      scaffoldMessenger.showSnackBar(getResultSnackBar(shareResult));
+    } catch (e) {
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text('Error: $e')),
+      );
+    }
   }
 
   SnackBar getResultSnackBar(ShareResult result) {

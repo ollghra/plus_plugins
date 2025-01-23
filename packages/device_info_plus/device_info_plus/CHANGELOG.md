@@ -1,3 +1,46 @@
+## 11.2.1
+
+ - **FIX**(device_info_plus): Resolve compilation issues with SPM enabled ([#3405](https://github.com/fluttercommunity/plus_plugins/issues/3405)). ([3f098c30](https://github.com/fluttercommunity/plus_plugins/commit/3f098c30320e1595c06b093e8eb9827a44435c5d))
+ - **FIX**(device_info_plus): device memory null error on Safari and Firefox ([#3401](https://github.com/fluttercommunity/plus_plugins/issues/3401)). ([2b7cb088](https://github.com/fluttercommunity/plus_plugins/commit/2b7cb0888cd725dc69e409590861fe8118058c4d))
+ - **FIX**(device_info_plus): add @Suppress(deprecate) to Build.SERIAL ([#3402](https://github.com/fluttercommunity/plus_plugins/issues/3402)). ([8e70d3f3](https://github.com/fluttercommunity/plus_plugins/commit/8e70d3f33d5f1c005dbb1aef733a8a8578989bac))
+
+## 11.2.0
+
+ - **REFACTOR**(all): Use range of flutter_lints for broader compatibility ([#3371](https://github.com/fluttercommunity/plus_plugins/issues/3371)). ([8a303add](https://github.com/fluttercommunity/plus_plugins/commit/8a303add3dee1acb8bac5838246490ed8a0fe408))
+ - **FIX**(device_info_plus): fix the error in the e2e test. ([#3382](https://github.com/fluttercommunity/plus_plugins/issues/3382)). ([3d06bf0e](https://github.com/fluttercommunity/plus_plugins/commit/3d06bf0ed8f1029df1230e4be6e75537abfcb19f))
+ - **FIX**(device_info_plus): Set correct Flutter and Dart versions requirements ([#3362](https://github.com/fluttercommunity/plus_plugins/issues/3362)). ([77861523](https://github.com/fluttercommunity/plus_plugins/commit/778615231c376c829d6241e7988f15a77bcaeb55))
+ - **FEAT**(device_info_plus): Return model name for iOS and MacOS devices ([#3358](https://github.com/fluttercommunity/plus_plugins/issues/3358)). ([63ca4cd8](https://github.com/fluttercommunity/plus_plugins/commit/63ca4cd8127e010650468a79532dd3a6047d2b31))
+ - **FEAT**(device_info_plus): Add the isiOSAppOnMac property for the iOS platform. ([#3383](https://github.com/fluttercommunity/plus_plugins/issues/3383)). ([e9077845](https://github.com/fluttercommunity/plus_plugins/commit/e9077845342023d325280985234b6a09d245ac02))
+
+## 11.1.1
+
+ - **FIX**(device_info_plus): Update privacy manifest paths ([#3347](https://github.com/fluttercommunity/plus_plugins/issues/3347)). ([46df2302](https://github.com/fluttercommunity/plus_plugins/commit/46df23023a5ba6c98edd31d5fd06bec5df40bd3b))
+
+## 11.1.0
+
+ - **FIX**(device_info_plus): Ignore `MissingPermission` lint error on Android ([#3317](https://github.com/fluttercommunity/plus_plugins/issues/3317)). ([6469523f](https://github.com/fluttercommunity/plus_plugins/commit/6469523fb14f32f7aa23892183693a8f502992d3))
+ - **FEAT**(device_info_plus): Add Swift Package Manager support ([#3167](https://github.com/fluttercommunity/plus_plugins/issues/3167)). ([6a347cb1](https://github.com/fluttercommunity/plus_plugins/commit/6a347cb106182d68329cd32827938e26bc7e7b00))
+
+## 11.0.0
+
+> Note: This release has breaking changes.
+
+ - **FIX**(all): Clean up macOS Privacy Manifests ([#3268](https://github.com/fluttercommunity/plus_plugins/issues/3268)). ([d7b98ebd](https://github.com/fluttercommunity/plus_plugins/commit/d7b98ebd7d39b0143931f5cc6e627187576223dc))
+ - **FIX**(all): Add macOS Privacy Manifests ([#3251](https://github.com/fluttercommunity/plus_plugins/issues/3251)). ([bf5dad2a](https://github.com/fluttercommunity/plus_plugins/commit/bf5dad2ad249605055bcbd5f663e42569df12d64))
+ - **FIX**(device_info_plus): Fix type cast of digitalProductId on windows ([#3188](https://github.com/fluttercommunity/plus_plugins/issues/3188)). ([91f48a6b](https://github.com/fluttercommunity/plus_plugins/commit/91f48a6bc7d11c4238c9539ca06e6fa768995580))
+ - **BREAKING** **FIX**(device_info_plus): fixed webasm compliance ([#3254](https://github.com/fluttercommunity/plus_plugins/issues/3254)). ([e35e2123](https://github.com/fluttercommunity/plus_plugins/commit/e35e2123451fc103bbb6f6d94f71ebced2ae8af5))
+
+## 10.1.2
+
+ - **DOCS**(device_info_plus): Update plugin requirements in README ([#3162](https://github.com/fluttercommunity/plus_plugins/issues/3162)). ([6cfa950f](https://github.com/fluttercommunity/plus_plugins/commit/6cfa950f66fec649093b6c44755dc06a3a23319e))
+
+## 10.1.1
+
+ - **CHORE**(device_info_plus): Use `>=0.5.0 < 2.0.0` version range for package:web.
+ - **FIX**(device_info_plus): fix integration_test iOS ([#2958](https://github.com/fluttercommunity/plus_plugins/issues/2958)). ([93ab854e](https://github.com/fluttercommunity/plus_plugins/commit/93ab854ee76a3de48387b6c54ddaeccb01cf49a9))
+ - **REFACTOR**(all): Remove website files, configs, mentions ([#3018](https://github.com/fluttercommunity/plus_plugins/issues/3018)). ([ecc57146](https://github.com/fluttercommunity/plus_plugins/commit/ecc57146aa8c6b1c9c332169d3cc2205bc4a700f))
+ - **FIX**(all): changed homepage url in pubspec.yaml ([#3099](https://github.com/fluttercommunity/plus_plugins/issues/3099)). ([66613656](https://github.com/fluttercommunity/plus_plugins/commit/66613656a85c176ba2ad337e4d4943d1f4171129))
+
 ## 10.1.0
 
  - **REFACTOR**(device_info_plus): Migrate Android example to use the new plugins declaration ([#2769](https://github.com/fluttercommunity/plus_plugins/issues/2769)). ([6103b155](https://github.com/fluttercommunity/plus_plugins/commit/6103b1559d6f9383bd66460bf7717afeeeb51d86))

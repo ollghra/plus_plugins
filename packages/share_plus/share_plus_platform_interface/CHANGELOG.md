@@ -1,3 +1,18 @@
+## 5.0.2
+
+ - **REFACTOR**(all): Use range of flutter_lints for broader compatibility ([#3371](https://github.com/fluttercommunity/plus_plugins/issues/3371)). ([8a303add](https://github.com/fluttercommunity/plus_plugins/commit/8a303add3dee1acb8bac5838246490ed8a0fe408))
+
+## 5.0.1
+
+ - **FIX**(share_plus): `mime` compatible with v2 (v1 still supported) ([#3309](https://github.com/fluttercommunity/plus_plugins/issues/3309)). ([401db75e](https://github.com/fluttercommunity/plus_plugins/commit/401db75efa24c40fd96a05e79d12801f92666efd))
+
+## 5.0.0
+
+> Note: This release has breaking changes.
+
+ - **FIX**(all): changed homepage url in pubspec.yaml ([#3099](https://github.com/fluttercommunity/plus_plugins/issues/3099)). ([66613656](https://github.com/fluttercommunity/plus_plugins/commit/66613656a85c176ba2ad337e4d4943d1f4171129))
+ - **BREAKING** **FEAT**(share_plus): Introduce optional parameter `nameOverride` to `shareXFiles`. ([#3077](https://github.com/fluttercommunity/plus_plugins/issues/3077)). ([f483bce7](https://github.com/fluttercommunity/plus_plugins/commit/f483bce77f50fc03e8c6c969864dd978e46f32da))
+
 ## 4.0.0
 
 > Note: This release has breaking changes.

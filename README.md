@@ -1,7 +1,7 @@
 <h1 align="center">Plus plugins</h1>
 <p align="center">
 <a href="https://flutter.dev/docs/development/packages-and-plugins/favorites" target="_blank" rel="noreferrer noopener">
-    <img src="./website/static/img/flutter-favorite-badge.png" width="20%" alt="build">
+    <img src="./assets/flutter-favorite-badge.png" width="15%" alt="build">
 </a>
 </p>
 
@@ -125,7 +125,7 @@ package, such as CFBundleVersion on iOS or versionCode on Android.
 
 > [![sensors_plus][sensors_plus_badge_pub]][sensors_plus] [![pub points][sensors_plus_badge_pub_points]][sensors_plus_pub_points]
 
-Flutter plugin for accessing accelerometer, gyroscope, and magnetometer sensors.
+Flutter plugin for accessing accelerometer, gyroscope, magnetometer and barometer sensors.
 
 [[View Source][sensors_plus_code]]
 

@@ -1,3 +1,26 @@
+## 6.1.2
+
+ - **DOCS**(connectivity_plus): update package requirements ([#3409](https://github.com/fluttercommunity/plus_plugins/issues/3409)). ([cb8c5ead](https://github.com/fluttercommunity/plus_plugins/commit/cb8c5ead41bf8f1d5042a1109eac3e23305d3016))
+
+## 6.1.1
+
+ - **REFACTOR**(all): Use range of flutter_lints for broader compatibility ([#3371](https://github.com/fluttercommunity/plus_plugins/issues/3371)). ([8a303add](https://github.com/fluttercommunity/plus_plugins/commit/8a303add3dee1acb8bac5838246490ed8a0fe408))
+ - **FIX**(connectivity_plus): macOS Privacy Manifest ([#3390](https://github.com/fluttercommunity/plus_plugins/issues/3390)). ([170703b5](https://github.com/fluttercommunity/plus_plugins/commit/170703b525c5390682fb558235ce699d29923b29))
+
+## 6.1.0
+
+ - **FEAT**(connectivity_plus): Add Swift Package Manager support ([#3173](https://github.com/fluttercommunity/plus_plugins/issues/3173)). ([036afeeb](https://github.com/fluttercommunity/plus_plugins/commit/036afeeb549f24813256f5049def6a6a3740a4f2))
+
+## 6.0.5
+
+ - **DOCS**(connectivity_plus): Update plugin requirements in README ([#3160](https://github.com/fluttercommunity/plus_plugins/issues/3160)). ([277f8b6b](https://github.com/fluttercommunity/plus_plugins/commit/277f8b6ba9ee6e7e5e3b1cce3e5eb8416830ba6b))
+
+## 6.0.4
+
+ - **CHORE**(connectivity_plus): Use `>=0.5.0 < 2.0.0` version range for package:web.
+ - **REFACTOR**(all): Remove website files, configs, mentions ([#3018](https://github.com/fluttercommunity/plus_plugins/issues/3018)). ([ecc57146](https://github.com/fluttercommunity/plus_plugins/commit/ecc57146aa8c6b1c9c332169d3cc2205bc4a700f))
+ - **FIX**(all): changed homepage url in pubspec.yaml ([#3099](https://github.com/fluttercommunity/plus_plugins/issues/3099)). ([66613656](https://github.com/fluttercommunity/plus_plugins/commit/66613656a85c176ba2ad337e4d4943d1f4171129))
+
 ## 6.0.3
 
  - **FIX**(connectivity_plus): Ensure Connectivity on Android is correctly reported when lost ([#2836](https://github.com/fluttercommunity/plus_plugins/issues/2836)). ([2aa6ad7a](https://github.com/fluttercommunity/plus_plugins/commit/2aa6ad7a1c05d35b894e6cef515bd9dfa49351dd))

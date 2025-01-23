@@ -1,3 +1,48 @@
+## 10.1.4
+
+ - **FIX**(share_plus): fallback for shareXFiles() to use download on web ([#3388](https://github.com/fluttercommunity/plus_plugins/issues/3388)). ([95a12ee3](https://github.com/fluttercommunity/plus_plugins/commit/95a12ee3982dd61de5d07005de62f81c2e99eb08))
+
+## 10.1.3
+
+ - **REFACTOR**(all): Use range of flutter_lints for broader compatibility ([#3371](https://github.com/fluttercommunity/plus_plugins/issues/3371)). ([8a303add](https://github.com/fluttercommunity/plus_plugins/commit/8a303add3dee1acb8bac5838246490ed8a0fe408))
+ - **FIX**(share_plus): A function declaration without a prototype is deprecated in all versions of C ([#3375](https://github.com/fluttercommunity/plus_plugins/issues/3375)). ([40f9c421](https://github.com/fluttercommunity/plus_plugins/commit/40f9c42138bf1c80e6283f46e12109a0e66c0816))
+ - **FIX**(share_plus): Set correct Flutter and Dart versions requirements ([#3363](https://github.com/fluttercommunity/plus_plugins/issues/3363)). ([65616668](https://github.com/fluttercommunity/plus_plugins/commit/6561666885f547725f6e88ebaae498832b53efed))
+
+## 10.1.2
+
+ - **FIX**(share_plus): Update privacy manifest path ([#3349](https://github.com/fluttercommunity/plus_plugins/issues/3349)). ([d884a991](https://github.com/fluttercommunity/plus_plugins/commit/d884a9917769e11daa66c1aaa3ebd0d015506e77))
+
+## 10.1.1
+
+ - **FIX**(share_plus): [#3322](https://github.com/fluttercommunity/plus_plugins/issues/3322) Downscale previews on iOS to avoid issues with huge images ([#3320](https://github.com/fluttercommunity/plus_plugins/issues/3320)). ([d8c95c2c](https://github.com/fluttercommunity/plus_plugins/commit/d8c95c2cffaf882cf0670cc5daf889eebd249a77))
+
+## 10.1.0
+
+ - **FEAT**(share_plus): Add Swift Package Manager support ([#3169](https://github.com/fluttercommunity/plus_plugins/issues/3169)). ([b3970225](https://github.com/fluttercommunity/plus_plugins/commit/b3970225b80183548ecc5516a5c1a1ad61016860))
+
+## 10.0.3
+
+ - **FIX**(share_plus): `mime` compatible with v2 (v1 still supported) ([#3309](https://github.com/fluttercommunity/plus_plugins/issues/3309)). ([401db75e](https://github.com/fluttercommunity/plus_plugins/commit/401db75efa24c40fd96a05e79d12801f92666efd))
+ - **FIX**(all): Clean up macOS Privacy Manifests ([#3268](https://github.com/fluttercommunity/plus_plugins/issues/3268)). ([d7b98ebd](https://github.com/fluttercommunity/plus_plugins/commit/d7b98ebd7d39b0143931f5cc6e627187576223dc))
+ - **FIX**(all): Add macOS Privacy Manifests ([#3251](https://github.com/fluttercommunity/plus_plugins/issues/3251)). ([bf5dad2a](https://github.com/fluttercommunity/plus_plugins/commit/bf5dad2ad249605055bcbd5f663e42569df12d64))
+
+## 10.0.2
+
+ - **FIX**(share_plus): [#2910](https://github.com/fluttercommunity/plus_plugins/issues/2910) Handle user dismissing dialog on shareUri() in web ([#3175](https://github.com/fluttercommunity/plus_plugins/issues/3175)). ([bba78118](https://github.com/fluttercommunity/plus_plugins/commit/bba781187b4af5682331ed90929c61c13137809a))
+
+## 10.0.1
+
+- **CHORE**(share_plus): Update to package:web to ^1.0.0 ([#3105](https://github.com/fluttercommunity/plus_plugins/pull/3105)). ([1f23910a](https://github.com/fluttercommunity/plus_plugins/commit/1f23910ab50fef2e499054f35cedfd14c578976a))
+
+## 10.0.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(share_plus): Introduce optional parameter `nameOverride` to `shareXFiles`. ([#3077](https://github.com/fluttercommunity/plus_plugins/issues/3077)). ([f483bce7](https://github.com/fluttercommunity/plus_plugins/commit/f483bce77f50fc03e8c6c969864dd978e46f32da))
+ - **REFACTOR**(all): Remove website files, configs, mentions ([#3018](https://github.com/fluttercommunity/plus_plugins/issues/3018)). ([ecc57146](https://github.com/fluttercommunity/plus_plugins/commit/ecc57146aa8c6b1c9c332169d3cc2205bc4a700f))
+ - **FIX**(all): changed homepage url in pubspec.yaml ([#3099](https://github.com/fluttercommunity/plus_plugins/issues/3099)). ([66613656](https://github.com/fluttercommunity/plus_plugins/commit/66613656a85c176ba2ad337e4d4943d1f4171129))
+ - **DOCS**(share_plus): Update README.md ([#2903](https://github.com/fluttercommunity/plus_plugins/issues/2903)). ([2a547eb3](https://github.com/fluttercommunity/plus_plugins/commit/2a547eb3f0093160279fbc9de21dde3f3ff75c81))
+
 ## 9.0.0
 
 > Note: This release has breaking changes.

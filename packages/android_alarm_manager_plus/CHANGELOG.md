@@ -1,3 +1,20 @@
+## 4.0.6
+
+ - **FIX**(android_alarm_manager_plus): set correct environment versions ([#3420](https://github.com/fluttercommunity/plus_plugins/issues/3420)). ([c2722f83](https://github.com/fluttercommunity/plus_plugins/commit/c2722f8345407d3bf7c66b99e57fbf5c75da428f))
+
+## 4.0.5
+
+ - **REFACTOR**(all): Use range of flutter_lints for broader compatibility ([#3371](https://github.com/fluttercommunity/plus_plugins/issues/3371)). ([8a303add](https://github.com/fluttercommunity/plus_plugins/commit/8a303add3dee1acb8bac5838246490ed8a0fe408))
+
+## 4.0.4
+
+ - **REFACTOR**(all): Remove website files, configs, mentions ([#3018](https://github.com/fluttercommunity/plus_plugins/issues/3018)). ([ecc57146](https://github.com/fluttercommunity/plus_plugins/commit/ecc57146aa8c6b1c9c332169d3cc2205bc4a700f))
+ - **FIX**(all): changed homepage url in pubspec.yaml ([#3099](https://github.com/fluttercommunity/plus_plugins/issues/3099)). ([66613656](https://github.com/fluttercommunity/plus_plugins/commit/66613656a85c176ba2ad337e4d4943d1f4171129))
+
+## 4.0.3
+
+ - **FIX**(android_alarm_manager_plus): Remove references to v1 embedding ([#2864](https://github.com/fluttercommunity/plus_plugins/issues/2864)). ([0bb6a1fd](https://github.com/fluttercommunity/plus_plugins/commit/0bb6a1fd8c77b3ed8ec92ffbd15e426921d1c71a))
+
 ## 4.0.2
 
  - **REFACTOR**(android_alarm_manager_plus): Migrate Android example to use the new plugins declaration ([#2774](https://github.com/fluttercommunity/plus_plugins/issues/2774)). ([2b8489ca](https://github.com/fluttercommunity/plus_plugins/commit/2b8489cabce6f73d8c16c4206455800a7d003ce1))

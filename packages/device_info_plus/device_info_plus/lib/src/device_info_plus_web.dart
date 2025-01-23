@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:js_interop';
 import 'package:web/web.dart' as html show window, Navigator;
 
 import 'package:device_info_plus_platform_interface/device_info_plus_platform_interface.dart';
@@ -28,9 +29,9 @@ class DeviceInfoPlusWebPlugin extends DeviceInfoPlatform {
           'appCodeName': _navigator.appCodeName,
           'appName': _navigator.appName,
           'appVersion': _navigator.appVersion,
-          'deviceMemory': _navigator.deviceMemory,
+          'deviceMemory': _navigator.safeDeviceMemory,
           'language': _navigator.language,
-          'languages': _navigator.languages,
+          'languages': _navigator.languages.toDart,
           'platform': _navigator.platform,
           'product': _navigator.product,
           'productSub': _navigator.productSub,
@@ -45,9 +46,15 @@ class DeviceInfoPlusWebPlugin extends DeviceInfoPlatform {
   }
 }
 
-/// Property is missing.
-/// Ticket: https://github.com/dart-lang/web/issues/192
-/// Probably won't be an int? in the future!
-extension on html.Navigator {
-  external int? get deviceMemory;
+/// Some Navigator properties are not fully supported in all browsers.
+/// However, package:web does not provide a safe way to access these properties,
+/// and assumes they are always not null.
+///
+/// This extension provides a safe way to access these properties.
+///
+/// See: https://github.com/dart-lang/web/issues/326
+///      https://github.com/fluttercommunity/plus_plugins/issues/3391
+extension SafeNavigationGetterExtensions on html.Navigator {
+  @JS('deviceMemory')
+  external double? get safeDeviceMemory;
 }
